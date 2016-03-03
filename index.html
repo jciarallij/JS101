@@ -1,26 +1,358 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<div id="the-fight">
+	
+		<img src="d1.gif" name="myDie1">
+	
+		<img src="d2.gif" name="myDie2">
+	
+	</div>
+
 <script type="text/javascript">
+// A property has no ()
+// A method/function has ()
+
+
 
 // printing stuff out
 // alert("Hello, World");
 // console.log("Hello, World");
 // console.dir("Hello, World");
+// window.alert("Hello, World");
 // window.document.write("Hello, World");
 // document.write("Hello, World");
 // console.log(document);
-console.dir(document);
+// console.dir(document);
+// console.log(window);
+// console.dir(window);
 // Object that is a person
 // - names
 // - ages
 // - gender
 // - height
 // - weight
+// - sleep()
+// - drive()
+
+
+// Object that is a car 
+// - color
+// - make
+// - model
+// - payment amount
+// - mpg
+// - year
+// - # of wheels
+// - options
+// - popularity
+// - drive()
+// - park()
+// - run ()
+// - crash ()
+
+
+// tesla = new car;
+// tesla.car .... black
+// tesla.drive() ... the tesla starts driving
+
+// var === variable "Use camel case for naming variables, variable is a placeholder to hold something!"
+
+
+// String - letters and numbers, they are meant for the print/User
+// var fullName = "Joshua Ciaralli";
+// document.write(fullName);
+// fullName = "Joshua Ciaralli is the best ever....";
+// document.write(fullName);
+
+
+// Integer - number with NO decimal points.
+// var myAge = 37;
+// var myAgeAsAString = "37";
+
+// var onMyBirthday = myAge + 1;
+// console.log(onMyBirthday);
+// var onMyBirthday = 1 + myAgeAsAString;
+// console.log(onMyBirthday);
+
+
+// var object = {};
+// console.log("1" + object);
+
+// var doubleMyAge = myAge + myAge;
+// doubleMyAge = myAge * 2;
+// console.log(doubleMyAge);
+
+// var notANumber = myAgeAsAString + 1;
+// console.log(notANumber);
+
+// var makeMeANumber = Number(myAgeAsAString) + 1;
+// console.log(makeMeANumber);
+
+// NaN = notANumber
+
+// FLOAT - is a number WTIH a decimal points
+// var floatNumber = 12.4;
+// console.log(typeof(12));
+// console.log(typeof(12.4));
+// var makeMeAnInteger = parseInt(floatNumber);
+// console.log(makeMeAnInteger);
+// var makeMeAFloat = parseFloat(12);
+// console.log(makeMeAFloat);
+
+// BOOLEANS - TRUE or FALSE. 1 or 0
+
+// var theTruth = true;
+// theTruth = 1;
+// console.log(typeof(theTruth));
+
+// var theLie = false;
+// theTruth = 0;
+// console.log(typeof(theLie));
+
+// var myAge = 37;
+// var myBirthday = myAge + 1;
+// console(myAge);
+
+// myAge++;
+// console.log(myAge);
+
+// var fortyTwo = 6 * 7;
+// fortyTwo = 84 / 2;
+// var numberTwo = 9 % 3 // modulus
+// console.log(numberTwo);
+
+
+
+// var x = 97
+// var amIEven = x % 2;
+// console.log(amIEven);
+
+
+
+// var num = 23;
+// var newNum = num++;
+// console.log(newNum);
+
+// var newNum = num;
+// num++;
+// console.log(num);
+
+// var newNumber = ++num;
+// console.log(num);
+
+
+// var salesTotal = 3 * 12 + 4;
+// console.log(salesTotal);
+// salesTotal = 3 * (12 + 4);
+// console.log(salesTotal);
+
+// salesTotal = (3 * (12 + 4) * 3);
+
+
+
+// concatenate
+
+// var firstName = "Joshua";
+// var lastName = "Ciaralli";
+// var fullName = firstName + lastName;
+// fullName = firstName + ' ' + lastName;
+// fullName = firstName + "is the best" + lastName;
+// fullName = firstName + '\'is the man!\'' + lastName;
+
+// var properName = firstName + lastName;
+// var wholeName = properName + middleName;
+
+
+// var concatNum = "2" + "2"; // 22
+
+// // string + number + number = string
+// var theMeaningOfLife = "The meaning of life is " + (40 + 2);
+// console.log(theMeaningOfLife);
+
+
+// //prompts
+// var name = prompt("What is your name?", "Name");
+// console.log(name);
+// var answer = prompt("What is 2 + 2?");
+// answer = Number(answer);
+
+// if(typeof(answer) === "number"){
+// 	if((answer === 4)){
+// 		alert("Correct!");
+// 	}
+// 	else {
+// 		alert("You are wrong. The answer is 4");
+// 	}
+// }
+
+// else {
+// 	alert("That isn't a number!");
+// }
+
+
+
+
+// JS prompts are limited to the scope of the page.
+// HTML inputs/forms can be accessed within the page as well as sent to other pages.
+
+//Conditionals
+
+// var numberOfRobs = 1;
+// var question = "What is your name?";
+// var defaultAnswer = "Rob";
+// var name = prompt(question, defaultAnswer);
+// if (name === "Rob") {
+// 	alert("That's 1 too many Robs!!");
+// }
+
+// else {
+// 	alert("Nice to meet you! " + name);
+// 	numberOfRobs--;
+// 	alert(numberOfRobs + " is a better number.");
+// }
+
+
+
+// var lotteryWinner = 3;
+// var yourLotteryTicket = 234534534;
+// if(yourLotteryTicket !== lotteryWinner){
+// 	alert("Tough luck no one ever wins.");
+// }
+
+
+
+//RANDOM
+// var randomNumber = Math.random();
+// var betweenOneAndOneHundred = Math.round(randomNumber * 100);
+// console.log(betweenOneAndOneHundred);
+
+// var randomNumberGame = Math.random();
+
+
+// var randomNumberGame = Math.random();
+// var betweenOneAndTen = Math.round(randomNumberGame * 10);
+// var betweenOneAndTen = Math.floor((Math.random() * 10 )+ 1);  // random number 1 - 10! not a number like "0"
+// var answer = prompt("Pick a number 1 - 10!");
+// var safeAnswerInput = Number(answer);
+// 	if (safeAnswerInput === betweenOneAndTen) {
+// 		alert("Congrats you picked the right number!");
+// 	}
+		
+// 	else if (Math.abs(safeAnswerInput - betweenOneAndTen) <= 2) {
+// 		alert("Your wrong but within 2 numbers" + betweenOneAndTen); 
+// 	}
+	
+// 	else {
+// 		alert("Sorry that number didn't match! The right answer is " + betweenOneAndTen);
+	// }
+
+
+// isNaN = checks to see if it is a number 
+ 
+
+
+
+// Array - is a single variable, with multiple variables inside it. In JS, it must be organized by number.
+
+
+// var nfcSouthTeamOne = "Falcons";
+// var nfcSouthTeamTwo = "Saints";
+// var nfcSouthTeamThree = "Panthers";
+// var nfcSouthTeamFour = "Bucs";
+
+// alert(nfcSouthTeamOne + " is the best team in the NFL!!! " + nfcSouthTeamFour + " is the worst!!!");
+
+
+
+// var nfcSouthTeams =[
+// 	"Falcons",
+// 	"Saints",
+// 	"Panthers",
+// 	"Bucs"
+// ];
+
+
+// nfcSouthTeams[9] = "The Ninjas";
+
+// teams.pop();  // Will remove the last element.
+// teams.push("The Cowboys"); // Add a element to the end of the array
+// teams.unshift("The Patriots"); // Add a element to the front of the array
+// teams.shift(); // Remove the first element from the array
+// teams.splice();
+// teams.slice();
+
+
+// console.dir(nfcSouthTeams);
+// console.log(nfcSouthTeams[0]);
+
+
+// var atlTeams = [
+// 	"Braves",
+// 	"Falcons",
+// 	"Hawks",
+// 	"Thrashers"
+// ];
+
+// console.log(atlTeams);
+// atlTeams.splice(2, 0,"Atlanta United"); // This will start at element 3. It will add whatever we give it. Will remove X starting at 3
+
+// console.log(atlTeams);
+
+// var twoTeams = atlTeams.slice(0, 1); // This will start copying at the first number and stop copying at the ending number you assign.
+
+// console.log(atlTeams);
+
+
+// 99 bottles of beer on the wall. 99 bottles of beer...
+// 98 bottles of beer on the wall. 98 bottles of beer...
+
+// // YOU DON'T HAVE TOO!
+
+// for(i = 0; i < atlTeams.length; i++) {
+// 	console.log(atlTeams[i]);
+// }
+
+// Strings are just arrays of characters!!! If you need to maipulate a string for 	
+// 	any reason, you can use slice, length, indexof, shift...
+
+
+// var myName = "roB tHE ManIAC";
+
+// var firstChar = myName.slice(0, 1);
+// var otherChar = myName.slice(1);
+
+
+// console.log(firstChar);
+// console.log(otherChar);
+
+// var properCaseName = firstChar.toUpperCase() + otherChar.toLowerCase();
+// console.log(properCaseName);
+
+// for (i = properCaseName.length; 0)
+// document.write(properCaseName[i]);
 
 
 
 
 
+// Dice Roller.
 
-
-
+function throwDie(){
+	var randomDie = Math.round(Math.Random() * 5) + 1; // This will produce a number 1 + 6
+	var imageName = "d" + randomDie + ".gif";
+	console.log(imageName);
+	document.images['myDie1'].src = imageName;
+}
+throwDie();
 
 </script>
+
+
+</body>
+</html>
