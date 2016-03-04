@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<title>Dragon Game!</title>
+	<link rel="stylesheet" type="text/css" href="css/dragon.css">
+
+
+</head>
+
+
+<body>
+
+	<div id="header">
+		
+		<div id="center-header">
+			<div class="text center">Decide! Either "FIGHT!" or "FLEE!"</div>
+			<p class="text p"> If you choose to fight! If you want to defeat the dragon you have to roll a "9" and if you roll lower than "6" you will die!</p>
+			<p class="text p2"> or you can run if you're a coward!</p>
+		</div>
+
+		<div id="left-header">
+			<button class="fight" type="button" onclick="throwDice();">FIGHT</button>
+			<!-- <input type="button" onclick="throwDice();" value="Fight the Dragon"> -->
+		</div>
+
+		<div id="right-header">
+			<button class="flee" type="" onclick="flee();">FLEE</button>
+			
+		</div>
+
+	</div>
+
+	<div id="drag-content">
+			<div class="dragpic"><img src="dragon.png"></div>
+			<div class="fleepic"><img src="fleeing.png"></div>
+			<div id="hp-ui">
+				<div class="drag-hp"> <!-- Placeholder for <img src="drag-hp.jpg"> --> </div>
+				<div class="player-hp"> <!-- Placeholder for <img src="player-hp.jpg"> --> </div>
+			</div>
+
+
+			<div id="game-UI">
+				<div class="zerk"> <!-- Placeholder for <img src="zerk.jpg"> --> </div>
+				<div class="hp-pot"> <!-- Placeholder for <img src="hp-pot.jpg"> --> </div>
+				<div class="roll"> <!-- Placeholder for <img src="roll.jpg"> --> </div>
+			</div>
+
+	<div id="footer">
+	
+			<div class="dice">
+				<img src="d1.gif" name="myDie1">
+				<img src="d1.gif" name="myDie2">
+			</div>
+
+
+
+	</div>
+
+	</div>
+<script type="text/javascript">
+
+function throwDice(){
+	var randomDie = Math.round(Math.random() * 5) + 1;
+	var imageName = "d" + randomDie + ".gif";
+	console.log(randomDie);
+	document.images['myDie1'].src = imageName;
+
+	randomDie2 = Math.round(Math.random() * 5) + 1; 
+	var imageName2 = "d" + randomDie2 + ".gif";
+	console.log(randomDie2);
+	document.images['myDie2'].src = imageName2;
+
+	var userRoll = randomDie + randomDie2;
+	if (userRoll >= 9) {
+		alert("You killed the Dragon!" + " You rolled: " + userRoll);
+	}
+	else if (userRoll <= 6) {
+		alert("Didn't do enough damage to the Dragon, you have been slain!" + " You rolled: " + userRoll);
+	}
+	else {
+		alert("Awesome got him! Attack again!" + " You rolled: " + userRoll);
+	}
+}
+
+function flee() {
+	var fleenow = document.getElementsByClassName('fleepic');
+	for (i = 0; i < fleenow.length; i++) {
+		fleenow[i].style.display = "block";
+	}
+		var drag = document.getElementsByClassName('dragpic');
+		for (i = 0; i < drag.length; i++) {
+		drag[i].style.display = "none";
+	}
+		var dice1 = document.getElementsByClassName('dice');
+		for (i = 0; i < dice1.length; i++) {
+		dice1[i].style.display = "none";
+	}
+	var center = document.getElementsByClassName('center-header');
+		for (i = 0; i < center.length; i++) {
+		center[i].style.display = "none";
+	}
+}
+
+</script>
+
+</body>
+</html>
