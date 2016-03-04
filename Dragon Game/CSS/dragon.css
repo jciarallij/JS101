@@ -40,7 +40,7 @@ img {
 	max-width: 960px;
 	margin: auto;
 	height: 760px;
-	margin-top: 5%;
+	margin-top: 7%;
 
 }
 
@@ -50,13 +50,20 @@ img {
 
 }
 
+p {
+	font-size: 15px;
+	clear: both;
+}
+
 #footer {
 	margin-top: 5%;
 	max-width: 460px;
 	margin:auto;
+	text-align: center;
 }
 
 .dice img {
+	text-align: center;
 	width: 20%;
 	display: inline-block;
 

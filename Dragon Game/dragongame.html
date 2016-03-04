@@ -16,7 +16,9 @@
 	<div id="header">
 		
 		<div id="center-header">
-			<div class="text-header-center">Decide! Either "FIGHT!" or "FLEE!"</div>
+			<div class="text center">Decide! Either "FIGHT!" or "FLEE!"</div>
+			<p class="text p"> If you choose to fight! If you want to defeat the dragon you have to roll a "9" and if you roll lower than "6" you will die!</p>
+			<p class="text p2"> or you can run if you're a coward!</p>
 		</div>
 
 		<div id="left-header">
@@ -71,14 +73,15 @@ function throwDice(){
 	console.log(randomDie2);
 	document.images['myDie2'].src = imageName2;
 
-	if (randomDie + randomDie >= 9) {
-		alert("You killed the Dragon!");
+	var userRoll = randomDie + randomDie2;
+	if (userRoll >= 9) {
+		alert("You killed the Dragon!" + " You rolled: " + userRoll);
 	}
-	else if (randomDie + randomDie <= 6) {
-		alert("Didn't do enough damage to the Dragon, you have been slain!")
+	else if (userRoll <= 6) {
+		alert("Didn't do enough damage to the Dragon, you have been slain!" + " You rolled: " + userRoll);
 	}
 	else {
-		alert("Awesome got him! Attack again!");
+		alert("Awesome got him! Attack again!" + " You rolled: " + userRoll);
 	}
 }
 
@@ -94,6 +97,10 @@ function flee() {
 		var dice1 = document.getElementsByClassName('dice');
 		for (i = 0; i < dice1.length; i++) {
 		dice1[i].style.display = "none";
+	}
+	var center = document.getElementsByClassName('center-header');
+		for (i = 0; i < center.length; i++) {
+		center[i].style.display = "none";
 	}
 }
 
