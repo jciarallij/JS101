@@ -343,13 +343,16 @@
 
 // Dice Roller.
 
-function throwDie(){
+function throwDice(){
 	var randomDie = Math.round(Math.Random() * 5) + 1; // This will produce a number 1 + 6
 	var imageName = "d" + randomDie + ".gif";
-	console.log(imageName);
 	document.images['myDie1'].src = imageName;
+
+	 randomDie2 = Math.round(Math.Random() * 5) + 1; 
+	var imageName = "d" + randomDie + ".gif";
+	document.images['myDie2'].src = imageName2;
 }
-throwDie();
+throwDice();
 
 </script>
 
